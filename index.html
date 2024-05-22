@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.O.S - RS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Faça sua doação para as Famílias <br> do Rio Grande do Sul</h2>
+        <form action="/submit-donation" method="POST">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+            <br>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+            <br>
+            <label for="endereco">Endereço:</label>
+            <textarea id="endereco" name="endereco" rows="3" required></textarea>
+            <br>
+            <label for="quantia">Quantia da Doação (R$):</label>
+            <input type="number" id="quantia" name="quantia" min="1" step="any" required>
+            <br>
+            <label for="metodo-pagamento">Método de Pagamento:</label>
+            <select id="metodo-pagamento" name="metodo-pagamento" required>
+                <option value="cartao-credito">Cartão de Crédito</option>
+                <option value="boleto">Boleto</option>
+                <option value="transferencia">Transferência Bancária</option>
+                <option value="pix">Pix</option>
+            </select>
+            <br>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva uma mensagem (opcional)"></textarea>
+            <br>
+            <button type="submit">Enviar Doação</button>
+        </form>
+    </div>
+</body>
+</html>
